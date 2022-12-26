@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'idroid';
+    src: url('../fontes/idroid.otf') format('opentype');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --cor0: #f79797 ;
+    --cor1: #F51000 ;
+    --cor2: #C20D00 ;
+    --cor3: #752923 ;
+    --cor4: #750800 ;
+
+    --fonte-padrao: Arial, Helvetica;
+    --fonte-destaque: 'Bebas Neue', Arial;
+    --fonte-idroid: 'idroid', Arial;
+}
+
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor3));
+    padding: 20px;
+    text-align: center;
+}
+header > h1 {
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.486);
+}
+
+header > p {
+    font-size: 1.3em;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.486);
+}
+
+nav {
+    background-color: var(--cor3);
+    padding: 15px 15px 15px 0px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.363);
+}
+
+nav > a {
+    text-decoration: none;
+    color: white;
+    margin: 0px 5px 0px 0px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav > a:hover {
+    background-color: var(--cor0);
+    color: black;
+    transition-duration: 1s;
+
+}
+
+article {
+    background-color: white;
+    min-width: 300px;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 0px 0px 10px 10px;
+    padding: 25px;
+    font-family: var(--fonte-padrao);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.589);
+}
+
+article > h1 {
+    color: var(--cor2);
+    font-family: var(--fonte-idroid);
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0px 20px 0px;
+}
+
+article > h2 {
+    font-family: var(--fonte-idroid);
+    color: #752923;
+    margin: 20px 0px 20px 0px;
+    background-image: linear-gradient(to right, var(--cor0), transparent );
+}
+
+article > p {
+    line-height: 30px;
+    text-indent: 20px;
+    text-align: justify;
+    margin: 20px 0px;
+    font-size: 1.1em;
+}
+
+img.bugdroid {
+    display: block;
+    max-width: 250px;
+    margin: auto;
+}
+
+div.video {
+    background-color: var(--cor3);
+    margin: 0px 0px 30px 0px;
+    padding: 20px;
+    padding-bottom: 56.4%;
+    border-radius: 10px;
+
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    background-color: var(--cor0);
+    margin: 10px 0px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+aside > h3 {
+    background-color: var(--cor2);
+    padding: 10px;
+    color: white;
+    font-size: 1.3em;
+}
+
+aside > p {
+    padding: 20px;
+}
+
+aside > ul {
+    list-style: inside;
+    margin-left: 50px;
+    columns: 2;
+}
+
+footer {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1em;
+}
+
+
+
+/* 
+    EXTRAS!! (Decorações em links, em palavras com strong e algumas mudanças simples em clases)
+*/
+/* Configurações em links */
+
+.linkexterno {
+    text-decoration: none;
+    color: var(--cor1);
+    background-color: var(--cor0);
+    padding: 5px;
+}
+
+.linkexterno:hover {
+    background-color: var(--cor4);
+    color: white;
+    padding: 5px;
+}
+
+.linkexterno::after{
+    content: '\00A0🔗';
+}
+
+/* Modificação em todo o comando strong para ficar em outra cor */
+/* recomendado usar = mark */
+
+strong {
+    font-weight: bold;
+    color: #C20D00;
+}
+
+/* Rodapé branco pois modifiquei todo o comando strong */
+strong.rodape {
+    color: white;
+}
+
+/* Border Radius na Imagem da Irina */
+img.irina {
+    border-radius: 10px;
+}
